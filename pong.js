@@ -45,14 +45,12 @@ playTo.addEventListener("change", function () {
 resetButton.addEventListener("click", resetScore);
 
 function endGame(player) {
+    winner.innerText = player + " wins!";
+    winner.classList.add('winner')
+    
     jsConfetti.addConfetti({
    emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸'],
-}).then(() => {
-    // change the text of the winner element
-        winner.innerText = player + " wins!";
-        winner.classList.add('winner')
-    }
-    )
+})
 
     p1Button.classList.add('disable-btn')
     p2Button.classList.add('disable-btn')
