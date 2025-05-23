@@ -3,45 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="pong.css">
-    <title>Document</title>
+    <title>Score Keeper</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
 </head>
 <body>
-    <canvas id="confetti"></canvas>
-    <h1 id="winner"></h1>
-    <div  class="banner">
-        <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3784&q=80" alt="">
-        <h1 id="title">Ping Pong Score Keeper</h1>
-    </div>
-    <div class="container">
-        <div class="scoreboard">
-            <h1 class="title is-1"><span id="p1Display">0</span> to <span id="p2Display">0</span></h1>
 
-            <p class="subtitle">Use the buttons below to keep score</p>
+<section class="section">
+<canvas id="confetti"></canvas>
 
-            <span id="score">
-                <label for="playto" class="label is-large is-inline">Playing To</label>
-                    <div class="select is-rounded">
-                        <select name="" id="playto">
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                        </select>
+<div class="container">
+    <div class="columns">
+        <div class="column is-half is-offset-one-quarter">
+            <div class="card">
+                <div class="card-image
+                    <div class="card">
+                        <div  class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3784&q=80" alt="">
+                            </figure>
+                        </div>
+                        
+                        <header class="card-header">
+                            <h1 class="card-header-title" id="winner">Ping Pong Score Keeper</h1>
+                            <button class="card-header-icon" aria-label="more options">
+                            <span class="icon">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                            </button>
+                        </header>
+
+                        <div class="card-content">
+
+                            <div class="content">
+                                
+
+                                <h1 class="title is-1"><span id="p1Display">0</span> to <span id="p2Display">0</span></h1>
+                                <p class="subtitle">Use the buttons below to keep score</p>
+                                <label for="playto" class="label is-large is-inline">Playing To </label>
+                                    <div class="select is-rounded">
+                                        <select name="" id="playto">
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                        </select>
+                                    </div>
+                            </div>
+
+                        <footer class="card-footer">
+                            <button id="p1Button" class="card-footer-item is-primary button">+1 Player One</button>
+                            <button id="p2Button" class="card-footer-item is-info button">+1 Player Two</button>
+                            <button id="reset" class="card-footer-item is-danger button">Reset</button>
+                        </footer>
                     </div>
-            </span>
-        </div>
-        <div class="buttons">
-            <button id="p1Button" class="is-primary button">+1 Player One</button>
-            <button id="p2Button" class="is-info button">+1 Player Two</button>
-            <button id="reset" class="is-danger button">Reset</button>
+                </div>
+
+
         </div>
     </div>
+</div>
+</section>
 
     <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
     <script src="pong.js"></script>
