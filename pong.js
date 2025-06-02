@@ -18,6 +18,8 @@ const resetButton = document.querySelector("#reset");
 const playingToText = document.querySelector("label[for='playto']");
 const winner = document.querySelector("#winner");
 
+const player1Name = document.querySelector("#p1Name");
+const player2Name = document.querySelector("#p2Name");
 
 const canvas = document.querySelector("#confetti")
 const jsConfetti = new JSConfetti()
@@ -62,6 +64,27 @@ function resetScore() {
     }
 }
 
+function setPlayerName(player, inputName) {
+    player.name = inputName;
+    player.name.innerText = player.name;
+    player.button.innerText = `+1 ${player.name}`;
+}
+
+player1Name.addEventListener("change", function () {
+    if (player1Name.value === "") {
+        player1Name.value = "Player 1";
+    }
+    setPlayerName(player1, player1Name.value);
+}
+);
+
+player2Name.addEventListener("change", function () {
+    if (player2Name.value === "") {
+        player2Name.value = "Player 2";
+    }
+    setPlayerName(player2, player2Name.value);
+}
+);
 
 player1.button.addEventListener("click", function () {
     updateScore(player1, player2);
